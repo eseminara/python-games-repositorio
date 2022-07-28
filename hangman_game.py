@@ -1,5 +1,5 @@
 from random import choice
-
+#Comentario#
 palabras = ['cangrego','ciervo','prioridad','unisono','guerrero','gargola','bestia','rombo','triangulo','torre','juego']
 letras_incorrectas = []
 letras_correctas = []
