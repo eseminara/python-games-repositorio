@@ -7,7 +7,7 @@ intentos = 6
 aciertos = 0
 juego_terminado = False
 
-
+#Comentario 2#
 def elegir_palbra(lista_palabras):
     palabra_elegida = choice(lista_palabras)
     letras_unicas = len(set(palabra_elegida))
@@ -47,9 +47,11 @@ def chequear_letra(letra_elegida, palabra_oculta, vidas, coincidencias):
 
     fin = False
 
-    if letra_elegida in palabra_oculta:
+    if letra_elegida in palabra_oculta and letra_elegida not in letras_correctas:
         letras_correctas.append(letra_elegida)
         coincidencias += 1
+    elif letra_elegida in palabra_oculta and letra_elegida in letras_correctas:
+        print('Esa letra ya fue elegida, intenta con otra')
     else:
         letras_incorrectas.append(letra_elegida)
         vidas -= 1
